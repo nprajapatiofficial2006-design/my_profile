@@ -7,78 +7,89 @@ import { ExternalLink } from 'lucide-react';
 // we will simulate the file discovery.
 
 const Portfolio = () => {
-    const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('all');
 
-    // Categories as per requirements
-    const categories = [
-        { id: 'all', label: 'All' },
-        { id: 'social-media', label: 'Social Media' },
-        { id: 'visiting-card', label: 'Visiting Card' },
-        { id: 'ppt-design', label: 'PPT Design' },
-        { id: 'booklet', label: 'Booklet' },
-        { id: 'banner', label: 'Banner' },
-        { id: 'linkedin', label: 'LinkedIn' },
-        { id: 'resume', label: 'Resume' },
-    ];
+  // Categories as per requirements
+  const categories = [
+    { id: 'all', label: 'All' },
+    { id: 'social-media', label: 'Social Media' },
+    { id: 'visiting-card', label: 'Visiting Card' },
+    { id: 'ppt-design', label: 'PPT Design' },
+    { id: 'booklet', label: 'Booklet' },
+    { id: 'banner', label: 'Banner' },
+    { id: 'linkedin', label: 'LinkedIn' },
+    { id: 'resume', label: 'Resume' },
+  ];
 
-    // Placeholder data - In a real scenario with auto-load, we would map the filenames from the glob result
-    // to this structure.
-    const projects = [
-        { id: 1, title: 'Instagram Campaign', category: 'social-media', image: '/images/work/social-media/placeholder.jpg' },
-        { id: 2, title: 'Corporate Identity', category: 'visiting-card', image: '/images/work/visiting-card/placeholder.jpg' },
-        { id: 3, title: 'Investor Pitch', category: 'ppt-design', image: '/images/work/ppt-design/placeholder.jpg' },
-        { id: 4, title: 'Product Catalog', category: 'booklet', image: '/images/work/booklet/placeholder.jpg' },
-        { id: 5, title: 'Event Banner', category: 'banner', image: '/images/work/banner/placeholder.jpg' },
-        { id: 6, title: 'Profile Makeover', category: 'linkedin', image: '/images/work/linkedin/placeholder.jpg' },
-        { id: 7, title: 'Professional Resume', category: 'resume', image: '/images/work/resume/placeholder.jpg' },
-        // Duplicate for grid effect
-        { id: 8, title: 'Facebook Ads', category: 'social-media', image: '/images/work/social-media/placeholder.jpg' },
-    ];
+  // Placeholder data - In a real scenario with auto-load, we would map the filenames from the glob result
+  // to this structure.
+  const projects = [
+    // Social Media
+    { id: 1, title: 'Social Media Post 1', category: 'social-media', image: '/images/work/social-media/Social_ (1).png' },
+    { id: 2, title: 'Social Media Post 2', category: 'social-media', image: '/images/work/social-media/Social_ (2).png' },
+    { id: 3, title: 'Instagram Story', category: 'social-media', image: '/images/work/social-media/Story_ (1).png' },
 
-    const filteredProjects = filter === 'all'
-        ? projects
-        : projects.filter(project => project.category === filter);
+    // Visiting Card
+    { id: 4, title: 'Corporate Identity', category: 'visiting-card', image: '/images/work/visiting-card/breuty cosmo india business card mockups.png' },
+    { id: 5, title: 'Restaurant Card', category: 'visiting-card', image: '/images/work/visiting-card/resturant card mockups.png' },
 
-    return (
-        <section id="portfolio" className="section-padding portfolio-section">
-            <div className="container">
-                <h2 className="section-title">My Work</h2>
+    // Banner
+    { id: 6, title: 'Event Banner', category: 'banner', image: '/images/work/banner/banner_ (1).png' },
+    { id: 7, title: 'Web Banner', category: 'banner', image: '/images/work/banner/banner_ (2).png' },
 
-                <div className="filters">
-                    {categories.map(cat => (
-                        <button
-                            key={cat.id}
-                            className={`filter-btn ${filter === cat.id ? 'active' : ''}`}
-                            onClick={() => setFilter(cat.id)}
-                        >
-                            {cat.label}
-                        </button>
-                    ))}
-                </div>
+    // Booklet
+    { id: 8, title: 'Bifold Catalog', category: 'booklet', image: '/images/work/booklet/Bifold_A4_Mockup_1.png' },
+    { id: 9, title: 'Book Cover Design', category: 'booklet', image: '/images/work/booklet/Book_Mockup_1.png' },
 
-                <div className="portfolio-grid">
-                    {filteredProjects.map(project => (
-                        <div key={project.id} className="portfolio-item">
-                            <div className="portfolio-image-container">
-                                {/* Using a colored div as placeholder if image fails, to keep it looking good */}
-                                <div className="placeholder-bg"></div>
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="portfolio-image"
-                                    onError={(e) => { e.target.style.display = 'none' }}
-                                />
-                            </div>
-                            <div className="portfolio-overlay">
-                                <h3 className="project-title">{project.title}</h3>
-                                <span className="project-category">{categories.find(c => c.id === project.category)?.label}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+    // LinkedIn
+    { id: 10, title: 'LinkedIn Banner', category: 'linkedin', image: '/images/work/linkedin/Nisha Linkedin Banner.png' },
+    { id: 11, title: 'LinkedIn Profile Pic', category: 'linkedin', image: '/images/work/linkedin/Nisha Linkedin Profile pic  (1).png' },
+  ];
+
+  const filteredProjects = filter === 'all'
+    ? projects
+    : projects.filter(project => project.category === filter);
+
+  return (
+    <section id="portfolio" className="section-padding portfolio-section">
+      <div className="container">
+        <h2 className="section-title">My Work</h2>
+
+        <div className="filters">
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              className={`filter-btn ${filter === cat.id ? 'active' : ''}`}
+              onClick={() => setFilter(cat.id)}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="portfolio-grid">
+          {filteredProjects.map(project => (
+            <div key={project.id} className="portfolio-item">
+              <div className="portfolio-image-container">
+                {/* Using a colored div as placeholder if image fails, to keep it looking good */}
+                <div className="placeholder-bg"></div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="portfolio-image"
+                  onError={(e) => { e.target.style.display = 'none' }}
+                />
+              </div>
+              <div className="portfolio-overlay">
+                <h3 className="project-title">{project.title}</h3>
+                <span className="project-category">{categories.find(c => c.id === project.category)?.label}</span>
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .portfolio-section {
           background-color: var(--bg-dark-grey);
         }
@@ -185,8 +196,8 @@ const Portfolio = () => {
           letter-spacing: 1px;
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Portfolio;

@@ -1221,37 +1221,37 @@
         const portfolioData = {
             "social-media": {
                 title: "Social Media Graphics",
-                folder: "Social Media Graphics",
-                images: ["Social_ (1).png", "Social_ (10).png", "Social_ (11).png", "Social_ (12).png", "Social_ (13).png", "Social_ (14).png", "Social_ (15).png", "Social_ (16).png", "Social_ (17).png", "Social_ (18).png", "Social_ (19).png", "Social_ (2).png", "Social_ (20).png", "Social_ (21).png", "Social_ (22).png", "Social_ (23).png", "Social_ (24).png", "Social_ (25).png", "Social_ (26).png", "Social_ (27).png", "Social_ (28).png", "Social_ (29).png", "Social_ (3).png", "Social_ (30).png", "Social_ (31).png", "Social_ (32).png", "Social_ (33).png", "Social_ (34).png", "Social_ (35).png", "Social_ (36).png", "Social_ (37).png", "Social_ (38).png", "Social_ (39).png", "Social_ (4).png", "Social_ (40).png", "Social_ (41).png", "Social_ (42).png", "Social_ (43).png", "Social_ (44).png", "Social_ (45).png", "Social_ (46).png", "Social_ (47).png", "Social_ (48).png", "Social_ (49).png", "Social_ (5).png", "Social_ (50).png", "Social_ (51).png", "Social_ (52).png", "Social_ (53).png", "Social_ (54).png", "Social_ (55).png", "Social_ (56).png", "Social_ (57).png", "Social_ (58).png", "Social_ (59).png", "Social_ (6).png", "Social_ (60).png", "Social_ (61).png", "Social_ (7).png", "Social_ (8).png", "Social_ (9).png", "Story_ (1).png", "Story_ (10).png", "Story_ (11).png", "Story_ (12).png", "Story_ (13).png", "Story_ (14).png", "Story_ (15).png", "Story_ (16).png", "Story_ (17).png", "Story_ (18).png", "Story_ (19).png", "Story_ (2).png", "Story_ (20).png", "Story_ (21).png", "Story_ (3).png", "Story_ (4).png", "Story_ (5).png", "Story_ (6).png", "Story_ (7).png", "Story_ (8).png", "Story_ (9).png"]
+                folder: "social-media",
+                images: ["Social_ (1).png", "Social_ (2).png", "Social_ (3).png", "Social_ (4).png", "Social_ (5).png", "Social_ (6).png", "Social_ (7).png", "Social_ (8).png", "Social_ (9).png", "Social_ (10).png", "Social_ (11).png", "Social_ (12).png", "Social_ (13).png", "Social_ (14).png", "Social_ (15).png", "Social_ (16).png", "Social_ (17).png", "Social_ (18).png", "Social_ (19).png", "Social_ (20).png", "Social_ (21).png", "Social_ (22).png", "Social_ (23).png", "Social_ (24).png", "Social_ (25).png", "Social_ (26).png", "Social_ (27).png", "Social_ (28).png", "Social_ (29).png", "Social_ (30).png", "Social_ (31).png", "Social_ (32).png", "Social_ (33).png", "Social_ (34).png", "Social_ (35).png", "Social_ (36).png", "Social_ (37).png", "Social_ (38).png", "Social_ (39).png", "Social_ (40).png", "Social_ (41).png", "Social_ (42).png", "Social_ (43).png", "Social_ (44).png", "Social_ (45).png", "Social_ (46).png", "Social_ (47).png", "Social_ (48).png", "Social_ (49).png", "Social_ (50).png", "Social_ (51).png", "Social_ (52).png", "Social_ (53).png", "Social_ (54).png", "Social_ (55).png", "Social_ (56).png", "Social_ (57).png", "Social_ (58).png", "Social_ (59).png", "Social_ (60).png", "Social_ (61).png", "Story_ (1).png", "Story_ (2).png", "Story_ (3).png", "Story_ (4).png", "Story_ (5).png", "Story_ (6).png", "Story_ (7).png", "Story_ (8).png", "Story_ (9).png", "Story_ (10).png", "Story_ (11).png", "Story_ (12).png", "Story_ (13).png", "Story_ (14).png", "Story_ (15).png", "Story_ (16).png", "Story_ (17).png", "Story_ (18).png", "Story_ (19).png", "Story_ (20).png", "Story_ (21).png"]
             },
             "visiting-card": {
                 title: "Visiting Card Design",
-                folder: "Visiting Card Design",
+                folder: "visiting-card",
                 images: ["breuty cosmo india business card mockups.png", "resturant card mockups.png"]
             },
             "banner": {
                 title: "Banner Design",
-                folder: "Banner Design",
+                folder: "banner",
                 images: ["banner_ (1).png", "banner_ (2).png", "banner_ (3).png", "banner_ (4).png", "banner_ (5).png", "banner_ (6).png", "banner_ (7).png"]
             },
             "booklet": {
                 title: "Booklet Design",
-                folder: "Booklet Design",
+                folder: "booklet",
                 images: ["Bifold_A4_Mockup_1.png", "Bifold_A4_Mockup_2.png", "Bifold_A4_Mockup_3.png", "Bifold_A4_Mockup_4.png", "Book_Mockup_1.png", "Book_Mockup_2.png", "Second book Mockup.png"]
             },
             "linkedin": {
                 title: "LinkedIn Profile Revamp",
-                folder: "LinkedIn Profile Revamp",
+                folder: "linkedin",
                 images: ["Nisha Linkedin Banner.png", "Nisha Linkedin Featured Banner (1).png", "Nisha Linkedin Featured Banner (2).png", "Nisha Linkedin Featured Banner.png", "Nisha Linkedin Profile pic  (1).png"]
             },
             "presentation": {
                 title: "Presentation Design",
-                folder: "Presentation Design",
+                folder: "ppt-design",
                 images: []
             },
             "resume": {
                 title: "Resume Design",
-                folder: "Resume Design",
+                folder: "resume",
                 images: []
             }
         };
@@ -1268,7 +1268,7 @@
                     item.className = 'portfolio-item show';
                     item.dataset.category = category;
 
-                    const imgPath = `../Work/${encodeURIComponent(data.folder)}/${encodeURIComponent(imgName)}`;
+                    const imgPath = `images/work/${data.folder}/${encodeURIComponent(imgName)}`;
 
                     item.innerHTML = `
                         <div class="portfolio-image-container" onclick="openLightbox('${imgPath}')">
