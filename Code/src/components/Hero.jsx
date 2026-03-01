@@ -2,31 +2,31 @@ import React from 'react';
 import { Download } from 'lucide-react';
 
 const Hero = () => {
-    return (
-        <section id="hero" className="hero-section">
-            <div className="container hero-container">
-                <div className="hero-content">
-                    <h1 className="hero-title">
-                        Creative Graphic Designer Crafting <span className="text-primary">Impactful Visuals</span>
-                    </h1>
-                    <p className="hero-subtitle">
-                        Hi, I’m <span className="text-primary">Nisha Prajapati</span> — a freelance graphic designer with 3 years of experience creating designs that help brands stand out.
-                    </p>
-                    <div className="hero-buttons">
-                        <a href="#contact" className="btn btn-primary">Hire Me</a>
-                        <a href="/resume.pdf" className="btn btn-outline" download>
-                            Download Resume <Download size={18} style={{ display: 'inline', marginLeft: '8px', verticalAlign: 'middle' }} />
-                        </a>
-                    </div>
-                </div>
-                <div className="hero-image-wrapper">
-                    <div className="hero-image-container">
-                        <img src="/images/profile/Profile.png" alt="Nisha Prajapati" className="hero-image" />
-                    </div>
-                </div>
-            </div>
+  return (
+    <section id="hero" className="hero-section">
+      <div className="container hero-container">
+        <div className="hero-content">
+          <h1 className="hero-title">
+            Creative Graphic Designer Crafting <span className="text-primary">Impactful Visuals</span>
+          </h1>
+          <p className="hero-subtitle">
+            Hi, I’m <span className="text-primary">Nisha Prajapati</span> — a freelance graphic designer with 3 years of experience creating designs that help brands stand out.
+          </p>
+          <div className="hero-buttons">
+            <a href="#contact" className="btn btn-primary">Hire Me</a>
+            <a href="/images/Resume/Nisha Resume.pdf" className="btn btn-outline" rel="noopener noreferrer" download="Nisha_Prajapati_Resume.pdf">
+              Download Resume <Download size={18} style={{ display: 'inline', marginLeft: '8px', verticalAlign: 'middle' }} />
+            </a>
+          </div>
+        </div>
+        <div className="hero-image-wrapper">
+          <div className="hero-image-container">
+            <img src="/images/profile/Profile.png" alt="Nisha Prajapati" className="hero-image" />
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .hero-section {
           background: linear-gradient(135deg, #000000 0%, #1a0525 100%);
           min-height: 100vh;
@@ -107,8 +107,8 @@ const Hero = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;

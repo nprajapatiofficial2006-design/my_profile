@@ -926,7 +926,8 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Hire Me</a>
-                    <a href="/resume.pdf" class="btn btn-outline" download>
+                    <a href="images/Resume/Nisha Resume.pdf" rel="noopener noreferrer" class="btn btn-outline"
+                        download="Nisha_Prajapati_Resume.pdf">
                         Download Resume <i data-lucide="download" size="18"></i>
                     </a>
                 </div>
@@ -1102,7 +1103,8 @@
                         </div>
                     </div>
                     <div class="resume-action">
-                        <a href="/resume.pdf" class="btn btn-primary" download>
+                        <a href="images/Resume/Nisha Resume.pdf" rel="noopener noreferrer" class="btn btn-primary"
+                            download="Nisha_Prajapati_Resume.pdf">
                             Download Full Resume <i data-lucide="download" style="margin-left:8px"></i>
                         </a>
                     </div>
@@ -1158,18 +1160,20 @@
         <div class="container">
             <h2 class="section-title">Let’s Create Something <span class="text-primary">Amazing</span></h2>
             <div class="contact-wrapper">
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent (demo)!')">
+                <form class="contact-form" action="mailto:nprajapatiofficial2006@gmail.com" method="POST"
+                    enctype="text/plain">
                     <div class="form-group">
                         <label>Your Name</label>
-                        <input type="text" placeholder="John Doe">
+                        <input type="text" name="name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="email" placeholder="john@example.com">
+                        <input type="email" name="email" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
                         <label>Project Details</label>
-                        <textarea placeholder="Tell me about your project..." rows="5"></textarea>
+                        <textarea name="message" placeholder="Tell me about your project..." rows="5"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">
                         Send Message <i data-lucide="send" style="margin-left:8px"></i>
@@ -1187,10 +1191,14 @@
                 <p>Freelance Graphic Designer</p>
             </div>
             <div class="social-links">
-                <a href="#" class="social-icon"><i data-lucide="instagram" size="20"></i></a>
-                <a href="#" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
-                <a href="#" class="social-icon"><i data-lucide="twitter" size="20"></i></a>
-                <a href="#" class="social-icon"><i data-lucide="mail" size="20"></i></a>
+                <a href="https://www.instagram.com/nishagraphics_1023/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon"><i data-lucide="instagram" size="20"></i></a>
+                <a href="https://www.linkedin.com/in/nisha-prajapati-752392283/" target="_blank"
+                    rel="noopener noreferrer" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
+                <a href="https://wa.me/919558027458" target="_blank" rel="noopener noreferrer" class="social-icon"><i
+                        data-lucide="message-circle" size="20"></i></a>
+                <a href="mailto:nprajapatiofficial2006@gmail.com" class="social-icon"><i data-lucide="mail"
+                        size="20"></i></a>
             </div>
             <div class="copyright">
                 <p>&copy; 2026 Designed by Nisha Prajapati</p>

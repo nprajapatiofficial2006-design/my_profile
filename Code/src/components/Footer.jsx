@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Instagram, Linkedin, MessageCircle, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -11,10 +11,10 @@ const Footer = () => {
                 </div>
 
                 <div className="social-links">
-                    <a href="#" className="social-icon"><Instagram size={20} /></a>
-                    <a href="#" className="social-icon"><Linkedin size={20} /></a>
-                    <a href="#" className="social-icon"><Twitter size={20} /></a>
-                    <a href="mailto:example@email.com" className="social-icon"><Mail size={20} /></a>
+                    <a href="https://www.instagram.com/nishagraphics_1023/" target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={20} /></a>
+                    <a href="https://www.linkedin.com/in/nisha-prajapati-752392283/" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={20} /></a>
+                    <a href="https://wa.me/919558027458" target="_blank" rel="noopener noreferrer" className="social-icon"><MessageCircle size={20} /></a>
+                    <a href="mailto:nprajapatiofficial2006@gmail.com" className="social-icon"><Mail size={20} /></a>
                 </div>
 
                 <div className="copyright">

@@ -2,87 +2,87 @@ import React from 'react';
 import { Download, CheckCircle } from 'lucide-react';
 
 const Resume = () => {
-    return (
-        <section id="resume" className="section-padding resume-section">
-            <div className="container">
-                <h2 className="section-title">Resume</h2>
+  return (
+    <section id="resume" className="section-padding resume-section">
+      <div className="container">
+        <h2 className="section-title">Resume</h2>
 
-                <div className="resume-grid">
-                    {/* Experience Column */}
-                    <div className="resume-col">
-                        <h3 className="col-title">Experience</h3>
-                        <div className="timeline">
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <span className="timeline-date">2021 - Present</span>
-                                <h4 className="timeline-role">Freelance Graphic Designer</h4>
-                                <p className="timeline-desc">
-                                    Working with diverse clients to create high-impact visuals, branding materials, and digital assets. specialized in social media and print design.
-                                </p>
-                            </div>
+        <div className="resume-grid">
+          {/* Experience Column */}
+          <div className="resume-col">
+            <h3 className="col-title">Experience</h3>
+            <div className="timeline">
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <span className="timeline-date">2021 - Present</span>
+                <h4 className="timeline-role">Freelance Graphic Designer</h4>
+                <p className="timeline-desc">
+                  Working with diverse clients to create high-impact visuals, branding materials, and digital assets. specialized in social media and print design.
+                </p>
+              </div>
 
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <span className="timeline-date">2020 - 2021</span>
-                                <h4 className="timeline-role">Junior Graphic Designer</h4>
-                                <p className="timeline-desc">
-                                    Assisted in creating marketing collateral and social media posts for local businesses.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <span className="timeline-date">2020 - 2021</span>
+                <h4 className="timeline-role">Junior Graphic Designer</h4>
+                <p className="timeline-desc">
+                  Assisted in creating marketing collateral and social media posts for local businesses.
+                </p>
+              </div>
+            </div>
+          </div>
 
-                    {/* Skills Column */}
-                    <div className="resume-col">
-                        <h3 className="col-title">Software Skills</h3>
-                        <div className="skills-list">
-                            <div className="skill-item">
-                                <div className="skill-info">
-                                    <span>Adobe Photoshop</span>
-                                    <span>95%</span>
-                                </div>
-                                <div className="skill-bar"><div className="skill-fill" style={{ width: '95%' }}></div></div>
-                            </div>
-                            <div className="skill-item">
-                                <div className="skill-info">
-                                    <span>Adobe Illustrator</span>
-                                    <span>90%</span>
-                                </div>
-                                <div className="skill-bar"><div className="skill-fill" style={{ width: '90%' }}></div></div>
-                            </div>
-                            <div className="skill-item">
-                                <div className="skill-info">
-                                    <span>Figma</span>
-                                    <span>85%</span>
-                                </div>
-                                <div className="skill-bar"><div className="skill-fill" style={{ width: '85%' }}></div></div>
-                            </div>
-                            <div className="skill-item">
-                                <div className="skill-info">
-                                    <span>Canva</span>
-                                    <span>100%</span>
-                                </div>
-                                <div className="skill-bar"><div className="skill-fill" style={{ width: '100%' }}></div></div>
-                            </div>
-                            <div className="skill-item">
-                                <div className="skill-info">
-                                    <span>PowerPoint</span>
-                                    <span>90%</span>
-                                </div>
-                                <div className="skill-bar"><div className="skill-fill" style={{ width: '90%' }}></div></div>
-                            </div>
-                        </div>
-
-                        <div className="resume-action">
-                            <a href="/resume.pdf" className="btn btn-primary" download>
-                                Download Full Resume <Download size={18} style={{ display: 'inline', marginLeft: '6px' }} />
-                            </a>
-                        </div>
-                    </div>
+          {/* Skills Column */}
+          <div className="resume-col">
+            <h3 className="col-title">Software Skills</h3>
+            <div className="skills-list">
+              <div className="skill-item">
+                <div className="skill-info">
+                  <span>Adobe Photoshop</span>
+                  <span>95%</span>
                 </div>
+                <div className="skill-bar"><div className="skill-fill" style={{ width: '95%' }}></div></div>
+              </div>
+              <div className="skill-item">
+                <div className="skill-info">
+                  <span>Adobe Illustrator</span>
+                  <span>90%</span>
+                </div>
+                <div className="skill-bar"><div className="skill-fill" style={{ width: '90%' }}></div></div>
+              </div>
+              <div className="skill-item">
+                <div className="skill-info">
+                  <span>Figma</span>
+                  <span>85%</span>
+                </div>
+                <div className="skill-bar"><div className="skill-fill" style={{ width: '85%' }}></div></div>
+              </div>
+              <div className="skill-item">
+                <div className="skill-info">
+                  <span>Canva</span>
+                  <span>100%</span>
+                </div>
+                <div className="skill-bar"><div className="skill-fill" style={{ width: '100%' }}></div></div>
+              </div>
+              <div className="skill-item">
+                <div className="skill-info">
+                  <span>PowerPoint</span>
+                  <span>90%</span>
+                </div>
+                <div className="skill-bar"><div className="skill-fill" style={{ width: '90%' }}></div></div>
+              </div>
             </div>
 
-            <style>{`
+            <div className="resume-action">
+              <a href="/images/Resume/Nisha Resume.pdf" className="btn btn-primary" rel="noopener noreferrer" download="Nisha_Prajapati_Resume.pdf">
+                Download Full Resume <Download size={18} style={{ display: 'inline', marginLeft: '6px' }} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
         .resume-section {
           background-color: var(--bg-black);
         }
@@ -180,8 +180,8 @@ const Resume = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Resume;

@@ -2,40 +2,40 @@ import React from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 
 const Contact = () => {
-    return (
-        <section id="contact" className="section-padding contact-section">
-            <div className="container">
-                <h2 className="section-title">Let’s Create Something <span className="text-primary">Amazing</span></h2>
+  return (
+    <section id="contact" className="section-padding contact-section">
+      <div className="container">
+        <h2 className="section-title">Let’s Create Something <span className="text-primary">Amazing</span></h2>
 
-                <div className="contact-wrapper">
-                    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                        <div className="form-group">
-                            <label>Your Name</label>
-                            <input type="text" placeholder="John Doe" />
-                        </div>
-
-                        <div className="form-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="john@example.com" />
-                        </div>
-
-                        <div className="form-group">
-                            <label>Project Details</label>
-                            <textarea placeholder="Tell me about your project..." rows="5"></textarea>
-                        </div>
-
-                        <button type="submit" className="btn btn-primary submit-btn">
-                            Send Message <Send size={18} style={{ display: 'inline', marginLeft: '8px' }} />
-                        </button>
-                    </form>
-
-                    <div className="contact-info">
-                        {/* Optional additional info could go here */}
-                    </div>
-                </div>
+        <div className="contact-wrapper">
+          <form className="contact-form" action="mailto:nprajapatiofficial2006@gmail.com" method="POST" encType="text/plain">
+            <div className="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Doe" required />
             </div>
 
-            <style>{`
+            <div className="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="john@example.com" required />
+            </div>
+
+            <div className="form-group">
+              <label>Project Details</label>
+              <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" className="btn btn-primary submit-btn">
+              Send Message <Send size={18} style={{ display: 'inline', marginLeft: '8px' }} />
+            </button>
+          </form>
+
+          <div className="contact-info">
+            {/* Optional additional info could go here */}
+          </div>
+        </div>
+      </div>
+
+      <style>{`
         .contact-section {
           background-color: var(--bg-black);
           text-align: center;
@@ -91,8 +91,8 @@ const Contact = () => {
           justify-content: center;
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Contact;
