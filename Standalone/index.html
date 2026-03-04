@@ -530,6 +530,26 @@
             letter-spacing: 1px;
         }
 
+        .view-pdf-link {
+            margin-top: 10px;
+            color: white;
+            background: var(--primary);
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 4;
+        }
+
+        .view-pdf-link:hover {
+            background: white;
+            color: var(--primary);
+        }
+
         /* Resume */
         .resume-section {
             background-color: var(--bg-black);
@@ -1195,8 +1215,13 @@
                     class="social-icon"><i data-lucide="instagram" size="20"></i></a>
                 <a href="https://www.linkedin.com/in/nisha-prajapati-752392283/" target="_blank"
                     rel="noopener noreferrer" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
-                <a href="https://wa.me/919558027458" target="_blank" rel="noopener noreferrer" class="social-icon"><i
-                        data-lucide="message-circle" size="20"></i></a>
+                <a href="https://wa.me/919558027458" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                </a>
                 <a href="mailto:nprajapatiofficial2006@gmail.com" class="social-icon"><i data-lucide="mail"
                         size="20"></i></a>
             </div>
@@ -1222,37 +1247,63 @@
             "social-media": {
                 title: "Social Media Graphics",
                 folder: "social-media",
-                images: ["Social_ (1).png", "Social_ (2).png", "Social_ (3).png", "Social_ (4).png", "Social_ (5).png", "Social_ (6).png", "Social_ (7).png", "Social_ (8).png", "Social_ (9).png", "Social_ (10).png", "Social_ (11).png", "Social_ (12).png", "Social_ (13).png", "Social_ (14).png", "Social_ (15).png", "Social_ (16).png", "Social_ (17).png", "Social_ (18).png", "Social_ (19).png", "Social_ (20).png", "Social_ (21).png", "Social_ (22).png", "Social_ (23).png", "Social_ (24).png", "Social_ (25).png", "Social_ (26).png", "Social_ (27).png", "Social_ (28).png", "Social_ (29).png", "Social_ (30).png", "Social_ (31).png", "Social_ (32).png", "Social_ (33).png", "Social_ (34).png", "Social_ (35).png", "Social_ (36).png", "Social_ (37).png", "Social_ (38).png", "Social_ (39).png", "Social_ (40).png", "Social_ (41).png", "Social_ (42).png", "Social_ (43).png", "Social_ (44).png", "Social_ (45).png", "Social_ (46).png", "Social_ (47).png", "Social_ (48).png", "Social_ (49).png", "Social_ (50).png", "Social_ (51).png", "Social_ (52).png", "Social_ (53).png", "Social_ (54).png", "Social_ (55).png", "Social_ (56).png", "Social_ (57).png", "Social_ (58).png", "Social_ (59).png", "Social_ (60).png", "Social_ (61).png", "Story_ (1).png", "Story_ (2).png", "Story_ (3).png", "Story_ (4).png", "Story_ (5).png", "Story_ (6).png", "Story_ (7).png", "Story_ (8).png", "Story_ (9).png", "Story_ (10).png", "Story_ (11).png", "Story_ (12).png", "Story_ (13).png", "Story_ (14).png", "Story_ (15).png", "Story_ (16).png", "Story_ (17).png", "Story_ (18).png", "Story_ (19).png", "Story_ (20).png", "Story_ (21).png"]
+                items: [
+                    { name: "Allura Post.png" }, { name: "Beauty Cosmetic Post.png" },
+                    { name: "Femina Miss India UP Post.png" }, { name: "Generic Bharat Post.png" },
+                    { name: "Gir Valley Story.png" }, { name: "Goyal Brother Story.png" },
+                    { name: "Goyal Brothers Post.png" }, { name: "Gri Valley Post.png" },
+                    { name: "Kunj Urban Post.png" }, { name: "Saingo Travelers Post.png" },
+                    { name: "Trainscafe Post.png" }
+                ]
             },
             "visiting-card": {
                 title: "Visiting Card Design",
                 folder: "visiting-card",
-                images: ["breuty cosmo india business card mockups.png", "resturant card mockups.png"]
+                items: [
+                    { name: "Beauty Visiting Card.png" }, { name: "Ganesh Visiting Card.jpg" },
+                    { name: "Pawan Viting Card.png" }, { name: "Resturant Visiting Card.png" },
+                    { name: "Shivendra Visiting Card.jpg" }, { name: "Visiting Card.png" },
+                    { name: "Yoyomiles Visiting Card.png" },
+                    { name: "Hireprow ID Card PDF.jpeg", pdf: "Hireprow Id Card.pdf" }
+                ]
             },
             "banner": {
                 title: "Banner Design",
                 folder: "banner",
-                images: ["banner_ (1).png", "banner_ (2).png", "banner_ (3).png", "banner_ (4).png", "banner_ (5).png", "banner_ (6).png", "banner_ (7).png"]
+                items: [
+                    { name: "Allura Sanitary FB.png" }, { name: "DR.Saurabh FB.png" },
+                    { name: "Femina Miss India UP FB.png" }, { name: "Little Heart FB.png" },
+                    { name: "SVS foundation FB.png" }, { name: "Yoyomiles FB.png" }
+                ]
             },
             "booklet": {
                 title: "Booklet Design",
                 folder: "booklet",
-                images: ["Bifold_A4_Mockup_1.png", "Bifold_A4_Mockup_2.png", "Bifold_A4_Mockup_3.png", "Bifold_A4_Mockup_4.png", "Book_Mockup_1.png", "Book_Mockup_2.png", "Second book Mockup.png"]
+                items: [
+                    { name: "Allura Booklet PDF.png", pdf: "Allura Pads Booklet Design.pdf" },
+                    { name: "Story book Cover.png" }
+                ]
             },
             "linkedin": {
                 title: "LinkedIn Profile Revamp",
                 folder: "linkedin",
-                images: ["Nisha Linkedin Banner.png", "Nisha Linkedin Featured Banner (1).png", "Nisha Linkedin Featured Banner (2).png", "Nisha Linkedin Featured Banner.png", "Nisha Linkedin Profile pic  (1).png"]
+                items: [
+                    { name: "Linkedin Post.png" }, { name: "linkedin Profile Cover.png" }
+                ]
             },
             "presentation": {
                 title: "Presentation Design",
                 folder: "ppt-design",
-                images: []
+                items: [
+                    { name: "SVS Foundation PDF.png", pdf: "SVS Foundation Design.pdf" }
+                ]
             },
             "resume": {
                 title: "Resume Design",
                 folder: "resume",
-                images: []
+                items: [
+                    { name: "Krunal Resume.png" }, { name: "Urja Schdev Resume.png" }
+                ]
             }
         };
 
@@ -1263,21 +1314,32 @@
 
             Object.keys(portfolioData).forEach(category => {
                 const data = portfolioData[category];
-                data.images.forEach(imgName => {
+                data.items.forEach(itemData => {
                     const item = document.createElement('div');
                     item.className = 'portfolio-item show';
                     item.dataset.category = category;
 
-                    const imgPath = `images/work/${data.folder}/${encodeURIComponent(imgName)}`;
+                    const imgPath = `images/work/${data.folder}/${encodeURIComponent(itemData.name)}`;
+                    const pdfPath = itemData.pdf ? `images/work/${data.folder}/${encodeURIComponent(itemData.pdf)}` : null;
+
+                    item.onclick = function () {
+                        if (pdfPath) {
+                            openPdfModal(pdfPath);
+                        } else {
+                            openLightbox(imgPath);
+                        }
+                    };
 
                     item.innerHTML = `
-                        <div class="portfolio-image-container" onclick="openLightbox('${imgPath}')">
+                        <div class="portfolio-image-container">
                             <div class="placeholder-bg"></div>
-                            <img src="${imgPath}" class="portfolio-image" loading="lazy">
+                            <img src="${imgPath}" class="portfolio-image" loading="lazy" onerror="if(this.src.endsWith('.pdf')) this.style.display='none'">
+                            ${itemData.name.endsWith('.pdf') ? '<div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; z-index:2; color:white; font-weight:bold; background:rgba(0,0,0,0.5);">PDF Document</div>' : ''}
                         </div>
-                        <div class="portfolio-overlay" onclick="openLightbox('${imgPath}')">
-                            <h3 class="project-title">${imgName.split('.')[0]}</h3>
+                        <div class="portfolio-overlay">
+                            <h3 class="project-title">${itemData.name.split('.')[0]}</h3>
                             <span class="project-category">${data.title}</span>
+                            ${pdfPath ? '<span class="pdf-badge" style="margin-top:8px; background:var(--primary); color:white; padding:4px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; width:fit-content;">Full PDF Available</span>' : ''}
                         </div>
                     `;
                     grid.appendChild(item);
@@ -1300,6 +1362,92 @@
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('active');
             document.body.style.overflow = 'auto'; // Re-enable scroll
+        }
+
+        // PDF Modal Functions
+        function openPdfModal(src) {
+            let modal = document.getElementById('pdf-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'pdf-modal';
+                modal.className = 'pdf-modal';
+                modal.onclick = closePdfModal;
+                modal.innerHTML = `
+                    <div class="pdf-modal-content" onclick="event.stopPropagation()">
+                        <button class="close-pdf" onclick="closePdfModal()">&times;</button>
+                        <iframe id="pdf-iframe" class="pdf-iframe"></iframe>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+
+                // Add PDF Modal Styles
+                const style = document.createElement('style');
+                style.textContent = `
+                    .pdf-modal {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.9);
+                        z-index: 3000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        pointer-events: none;
+                    }
+                    .pdf-modal.active {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                    .pdf-modal-content {
+                        width: 95%;
+                        height: 95%;
+                        background: white;
+                        border-radius: 12px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .pdf-iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                    .close-pdf {
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                        font-size: 2.5rem;
+                        color: #333;
+                        background: rgba(255,255,255,0.8);
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        line-height: 44px;
+                        text-align: center;
+                        cursor: pointer;
+                        z-index: 3001;
+                        border: none;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.getElementById('pdf-iframe').src = src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePdfModal() {
+            const modal = document.getElementById('pdf-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.getElementById('pdf-iframe').src = '';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Mobile Menu

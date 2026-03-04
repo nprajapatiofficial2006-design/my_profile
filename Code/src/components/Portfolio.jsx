@@ -8,6 +8,7 @@ import { ExternalLink } from 'lucide-react';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
+  const [activePdf, setActivePdf] = useState(null);
 
   // Categories as per requirements
   const categories = [
@@ -25,30 +26,61 @@ const Portfolio = () => {
   // to this structure.
   const projects = [
     // Social Media
-    { id: 1, title: 'Social Media Post 1', category: 'social-media', image: '/images/work/social-media/Social_ (1).png' },
-    { id: 2, title: 'Social Media Post 2', category: 'social-media', image: '/images/work/social-media/Social_ (2).png' },
-    { id: 3, title: 'Instagram Story', category: 'social-media', image: '/images/work/social-media/Story_ (1).png' },
+    { id: 101, title: 'Allura Post', category: 'social-media', image: '/images/work/social-media/Allura Post.png' },
+    { id: 102, title: 'Beauty Cosmetic Post', category: 'social-media', image: '/images/work/social-media/Beauty Cosmetic Post.png' },
+    { id: 103, title: 'Femina Miss India UP Post', category: 'social-media', image: '/images/work/social-media/Femina Miss India UP Post.png' },
+    { id: 104, title: 'Generic Bharat Post', category: 'social-media', image: '/images/work/social-media/Generic Bharat Post.png' },
+    { id: 105, title: 'Gir Valley Story', category: 'social-media', image: '/images/work/social-media/Gir Valley Story.png' },
+    { id: 106, title: 'Goyal Brother Story', category: 'social-media', image: '/images/work/social-media/Goyal Brother Story.png' },
+    { id: 107, title: 'Goyal Brothers Post', category: 'social-media', image: '/images/work/social-media/Goyal Brothers Post.png' },
+    { id: 108, title: 'Gri Valley Post', category: 'social-media', image: '/images/work/social-media/Gri Valley Post.png' },
+    { id: 109, title: 'Kunj Urban Post', category: 'social-media', image: '/images/work/social-media/Kunj Urban Post.png' },
+    { id: 110, title: 'Saingo Travelers Post', category: 'social-media', image: '/images/work/social-media/Saingo Travelers Post.png' },
+    { id: 111, title: 'Trainscafe Post', category: 'social-media', image: '/images/work/social-media/Trainscafe Post.png' },
 
     // Visiting Card
-    { id: 4, title: 'Corporate Identity', category: 'visiting-card', image: '/images/work/visiting-card/breuty cosmo india business card mockups.png' },
-    { id: 5, title: 'Restaurant Card', category: 'visiting-card', image: '/images/work/visiting-card/resturant card mockups.png' },
+    { id: 201, title: 'Beauty Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Beauty Visiting Card.png' },
+    { id: 202, title: 'Ganesh Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Ganesh Visiting Card.jpg' },
+    { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Pawan Viting Card.png' },
+    { id: 204, title: 'Resturant Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Resturant Visiting Card.png' },
+    { id: 205, title: 'Shivendra Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Shivendra Visiting Card.jpg' },
+    { id: 206, title: 'Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Visiting Card.png' },
+    { id: 207, title: 'Yoyomiles Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Yoyomiles Visiting Card.png' },
+    { id: 208, title: 'Hireprow Id Card', category: 'visiting-card', image: '/images/work/visiting-card/Hireprow ID Card PDF.jpeg', pdf: '/images/work/visiting-card/Hireprow Id Card.pdf' },
 
     // Banner
-    { id: 6, title: 'Event Banner', category: 'banner', image: '/images/work/banner/banner_ (1).png' },
-    { id: 7, title: 'Web Banner', category: 'banner', image: '/images/work/banner/banner_ (2).png' },
+    { id: 401, title: 'Allura Sanitary', category: 'banner', image: '/images/work/banner/Allura Sanitary FB.png' },
+    { id: 402, title: 'DR. Saurabh', category: 'banner', image: '/images/work/banner/DR.Saurabh FB.png' },
+    { id: 403, title: 'Femina Miss India UP', category: 'banner', image: '/images/work/banner/Femina Miss India UP FB.png' },
+    { id: 404, title: 'Little Heart', category: 'banner', image: '/images/work/banner/Little Heart FB.png' },
+    { id: 405, title: 'SVS Foundation', category: 'banner', image: '/images/work/banner/SVS foundation FB.png' },
+    { id: 406, title: 'Yoyomiles', category: 'banner', image: '/images/work/banner/Yoyomiles FB.png' },
 
     // Booklet
-    { id: 8, title: 'Bifold Catalog', category: 'booklet', image: '/images/work/booklet/Bifold_A4_Mockup_1.png' },
-    { id: 9, title: 'Book Cover Design', category: 'booklet', image: '/images/work/booklet/Book_Mockup_1.png' },
+    { id: 501, title: 'Allura Pads Booklet', category: 'booklet', image: '/images/work/booklet/Allura Booklet PDF.png', pdf: '/images/work/booklet/Allura Pads Booklet Design.pdf' },
+    { id: 502, title: 'Story Book Cover', category: 'booklet', image: '/images/work/booklet/Story book Cover.png' },
 
     // LinkedIn
-    { id: 10, title: 'LinkedIn Banner', category: 'linkedin', image: '/images/work/linkedin/Nisha Linkedin Banner.png' },
-    { id: 11, title: 'LinkedIn Profile Pic', category: 'linkedin', image: '/images/work/linkedin/Nisha Linkedin Profile pic  (1).png' },
+    { id: 601, title: 'Linkedin Post', category: 'linkedin', image: '/images/work/linkedin/Linkedin Post.png' },
+    { id: 602, title: 'Linkedin Profile Cover', category: 'linkedin', image: '/images/work/linkedin/linkedin Profile Cover.png' },
+
+    // Presentation
+    { id: 701, title: 'SVS Foundation Design', category: 'ppt-design', image: '/images/work/ppt-design/SVS Foundation PDF.png', pdf: '/images/work/ppt-design/SVS Foundation Design.pdf' },
+
+    // Resume
+    { id: 301, title: 'Krunal Resume', category: 'resume', image: '/images/work/resume/Krunal Resume.png' },
+    { id: 302, title: 'Urja Schdev Resume', category: 'resume', image: '/images/work/resume/Urja Schdev Resume.png' },
   ];
 
   const filteredProjects = filter === 'all'
     ? projects
     : projects.filter(project => project.category === filter);
+
+  const handleProjectClick = (project) => {
+    if (project.pdf) {
+      setActivePdf(project.pdf);
+    }
+  };
 
   return (
     <section id="portfolio" className="section-padding portfolio-section">
@@ -69,25 +101,50 @@ const Portfolio = () => {
 
         <div className="portfolio-grid">
           {filteredProjects.map(project => (
-            <div key={project.id} className="portfolio-item">
+            <div
+              key={project.id}
+              className="portfolio-item"
+              onClick={() => handleProjectClick(project)}
+            >
               <div className="portfolio-image-container">
-                {/* Using a colored div as placeholder if image fails, to keep it looking good */}
                 <div className="placeholder-bg"></div>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="portfolio-image"
-                  onError={(e) => { e.target.style.display = 'none' }}
-                />
+                {project.image.endsWith('.pdf') ? (
+                  <div className="pdf-thumbnail-placeholder">
+                    <span>PDF Document</span>
+                  </div>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="portfolio-image"
+                    onError={(e) => { e.target.style.display = 'none' }}
+                  />
+                )}
               </div>
               <div className="portfolio-overlay">
                 <h3 className="project-title">{project.title}</h3>
                 <span className="project-category">{categories.find(c => c.id === project.category)?.label}</span>
+                {project.pdf && (
+                  <span className="pdf-badge">Full PDF Available</span>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {activePdf && (
+        <div className="pdf-modal" onClick={() => setActivePdf(null)}>
+          <div className="pdf-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-pdf" onClick={() => setActivePdf(null)}>&times;</button>
+            <iframe
+              src={activePdf}
+              title="PDF Viewer"
+              className="pdf-iframe"
+            ></iframe>
+          </div>
+        </div>
+      )}
 
       <style>{`
         .portfolio-section {
@@ -194,6 +251,95 @@ const Portfolio = () => {
           font-size: 0.9rem;
           text-transform: uppercase;
           letter-spacing: 1px;
+        }
+
+        .pdf-badge {
+          margin-top: 8px;
+          background: var(--primary);
+          color: white;
+          padding: 4px 10px;
+          border-radius: 4px;
+          font-size: 0.75rem;
+          font-weight: 600;
+          width: fit-content;
+        }
+
+        .pdf-thumbnail-placeholder {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: bold;
+          z-index: 2;
+          background: rgba(0,0,0,0.5);
+        }
+
+        /* PDF Modal Styles */
+        .pdf-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.9);
+          z-index: 2000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .pdf-modal-content {
+          width: 95%;
+          height: 95%;
+          background: white;
+          border-radius: 12px;
+          position: relative;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+          overflow: hidden;
+        }
+
+        .pdf-iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+
+        .close-pdf {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          font-size: 2.5rem;
+          color: #333;
+          background: rgba(255,255,255,0.8);
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          line-height: 44px;
+          text-align: center;
+          cursor: pointer;
+          z-index: 2001;
+          border: none;
+          transition: var(--transition);
+        }
+
+        .close-pdf:hover {
+          color: var(--primary);
+          background: white;
+          transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+          .pdf-modal-content {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+          }
         }
       `}</style>
     </section>
