@@ -39,6 +39,7 @@ const Portfolio = () => {
     { id: 111, title: 'Trainscafe Post', category: 'social-media', image: '/images/work/social-media/Trainscafe Post.png' },
 
     // Visiting Card
+    { id: 200, title: 'Allura Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Allura Visiting Card.png' },
     { id: 201, title: 'Beauty Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Beauty Visiting Card.png' },
     { id: 202, title: 'Ganesh Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Ganesh Visiting Card.jpg' },
     { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: '/images/work/visiting-card/Pawan Viting Card.png' },
@@ -59,6 +60,7 @@ const Portfolio = () => {
     // Booklet
     { id: 501, title: 'Allura Pads Booklet', category: 'booklet', image: '/images/work/booklet/Allura Booklet PDF.png', pdf: '/images/work/booklet/Allura Pads Booklet Design.pdf' },
     { id: 502, title: 'Story Book Cover', category: 'booklet', image: '/images/work/booklet/Story book Cover.png' },
+    { id: 503, title: 'Book Cover Design', category: 'booklet', image: '/images/work/booklet/Book Cover Design.png' },
 
     // LinkedIn
     { id: 601, title: 'Linkedin Post', category: 'linkedin', image: '/images/work/linkedin/Linkedin Post.png' },
