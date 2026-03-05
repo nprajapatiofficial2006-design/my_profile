@@ -26,52 +26,52 @@ const Portfolio = () => {
   // to this structure.
   const projects = [
     // Social Media
-    { id: 101, title: 'Allura Post', category: 'social-media', image: 'images/work/social-media/Allura Post.png' },
-    { id: 102, title: 'Beauty Cosmetic Post', category: 'social-media', image: 'images/work/social-media/Beauty Cosmetic Post.png' },
-    { id: 103, title: 'Femina Miss India UP Post', category: 'social-media', image: 'images/work/social-media/Femina Miss India UP Post.png' },
-    { id: 104, title: 'Generic Bharat Post', category: 'social-media', image: 'images/work/social-media/Generic Bharat Post.png' },
-    { id: 105, title: 'Gir Valley Story', category: 'social-media', image: 'images/work/social-media/Gir Valley Story.png' },
-    { id: 106, title: 'Goyal Brother Story', category: 'social-media', image: 'images/work/social-media/Goyal Brother Story.png' },
-    { id: 107, title: 'Goyal Brothers Post', category: 'social-media', image: 'images/work/social-media/Goyal Brothers Post.png' },
-    { id: 108, title: 'Gri Valley Post', category: 'social-media', image: 'images/work/social-media/Gri Valley Post.png' },
-    { id: 109, title: 'Kunj Urban Post', category: 'social-media', image: 'images/work/social-media/Kunj Urban Post.png' },
-    { id: 110, title: 'Saingo Travelers Post', category: 'social-media', image: 'images/work/social-media/Saingo Travelers Post.png' },
-    { id: 111, title: 'Trainscafe Post', category: 'social-media', image: 'images/work/social-media/Trainscafe Post.png' },
+    { id: 101, title: 'Allura Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Allura Post.png` },
+    { id: 102, title: 'Beauty Cosmetic Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Beauty Cosmetic Post.png` },
+    { id: 103, title: 'Femina Miss India UP Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Femina Miss India UP Post.png` },
+    { id: 104, title: 'Generic Bharat Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Generic Bharat Post.png` },
+    { id: 105, title: 'Gir Valley Story', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Gir Valley Story.png` },
+    { id: 106, title: 'Goyal Brother Story', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Goyal Brother Story.png` },
+    { id: 107, title: 'Goyal Brothers Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Goyal Brothers Post.png` },
+    { id: 108, title: 'Gri Valley Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Gri Valley Post.png` },
+    { id: 109, title: 'Kunj Urban Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Kunj Urban Post.png` },
+    { id: 110, title: 'Saingo Travelers Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Saingo Travelers Post.png` },
+    { id: 111, title: 'Trainscafe Post', category: 'social-media', image: `${import.meta.env.BASE_URL}images/work/social-media/Trainscafe Post.png` },
 
     // Visiting Card
-    { id: 200, title: 'Allura Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Allura Visiting Card.png' },
-    { id: 201, title: 'Beauty Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Beauty Visiting Card.png' },
-    { id: 202, title: 'Ganesh Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Ganesh Visiting Card.jpg' },
-    { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Pawan Viting Card.png' },
-    { id: 204, title: 'Resturant Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Resturant Visiting Card.png' },
-    { id: 205, title: 'Shivendra Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Shivendra Visiting Card.jpg' },
-    { id: 206, title: 'Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Visiting Card.png' },
-    { id: 207, title: 'Yoyomiles Visiting Card', category: 'visiting-card', image: 'images/work/visiting-card/Yoyomiles Visiting Card.png' },
-    { id: 208, title: 'Hireprow Id Card', category: 'visiting-card', image: 'images/work/visiting-card/Hireprow ID Card PDF.jpeg', pdf: 'images/work/visiting-card/Hireprow Id Card.pdf' },
+    { id: 200, title: 'Allura Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Allura Visiting Card.png` },
+    { id: 201, title: 'Beauty Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Beauty Visiting Card.png` },
+    { id: 202, title: 'Ganesh Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Ganesh Visiting Card.jpg` },
+    { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Pawan Viting Card.png` },
+    { id: 204, title: 'Resturant Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Resturant Visiting Card.png` },
+    { id: 205, title: 'Shivendra Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Shivendra Visiting Card.jpg` },
+    { id: 206, title: 'Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Visiting Card.png` },
+    { id: 207, title: 'Yoyomiles Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Yoyomiles Visiting Card.png` },
+    { id: 208, title: 'Hireprow Id Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Hireprow ID Card PDF.jpeg`, pdf: `${import.meta.env.BASE_URL}images/work/visiting-card/Hireprow Id Card.pdf` },
 
     // Banner
-    { id: 401, title: 'Allura Sanitary', category: 'banner', image: 'images/work/banner/Allura Sanitary FB.png' },
-    { id: 402, title: 'DR. Saurabh', category: 'banner', image: 'images/work/banner/DR.Saurabh FB.png' },
-    { id: 403, title: 'Femina Miss India UP', category: 'banner', image: 'images/work/banner/Femina Miss India UP FB.png' },
-    { id: 404, title: 'Little Heart', category: 'banner', image: 'images/work/banner/Little Heart FB.png' },
-    { id: 405, title: 'SVS Foundation', category: 'banner', image: 'images/work/banner/SVS foundation FB.png' },
-    { id: 406, title: 'Yoyomiles', category: 'banner', image: 'images/work/banner/Yoyomiles FB.png' },
+    { id: 401, title: 'Allura Sanitary', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/Allura Sanitary FB.png` },
+    { id: 402, title: 'DR. Saurabh', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/DR.Saurabh FB.png` },
+    { id: 403, title: 'Femina Miss India UP', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/Femina Miss India UP FB.png` },
+    { id: 404, title: 'Little Heart', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/Little Heart FB.png` },
+    { id: 405, title: 'SVS Foundation', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/SVS foundation FB.png` },
+    { id: 406, title: 'Yoyomiles', category: 'banner', image: `${import.meta.env.BASE_URL}images/work/banner/Yoyomiles FB.png` },
 
     // Booklet
-    { id: 501, title: 'Allura Pads Booklet', category: 'booklet', image: 'images/work/booklet/Allura Booklet PDF.png', pdf: 'images/work/booklet/Allura Pads Booklet Design.pdf' },
-    { id: 502, title: 'Story Book Cover', category: 'booklet', image: 'images/work/booklet/Story book Cover.png' },
-    { id: 503, title: 'Book Cover Design', category: 'booklet', image: 'images/work/booklet/Book Cover Design.png' },
+    { id: 501, title: 'Allura Pads Booklet', category: 'booklet', image: `${import.meta.env.BASE_URL}images/work/booklet/Allura Booklet PDF.png`, pdf: `${import.meta.env.BASE_URL}images/work/booklet/Allura Pads Booklet Design.pdf` },
+    { id: 502, title: 'Story Book Cover', category: 'booklet', image: `${import.meta.env.BASE_URL}images/work/booklet/Story book Cover.png` },
+    { id: 503, title: 'Book Cover Design', category: 'booklet', image: `${import.meta.env.BASE_URL}images/work/booklet/Book Cover Design.png` },
 
     // LinkedIn
-    { id: 601, title: 'Linkedin Post', category: 'linkedin', image: 'images/work/linkedin/Linkedin Post.png' },
-    { id: 602, title: 'Linkedin Profile Cover', category: 'linkedin', image: 'images/work/linkedin/linkedin Profile Cover.png' },
+    { id: 601, title: 'Linkedin Post', category: 'linkedin', image: `${import.meta.env.BASE_URL}images/work/linkedin/Linkedin Post.png` },
+    { id: 602, title: 'Linkedin Profile Cover', category: 'linkedin', image: `${import.meta.env.BASE_URL}images/work/linkedin/linkedin Profile Cover.png` },
 
     // Presentation
-    { id: 701, title: 'SVS Foundation Design', category: 'ppt-design', image: 'images/work/ppt-design/SVS Foundation PDF.png', pdf: 'images/work/ppt-design/SVS Foundation Design.pdf' },
+    { id: 701, title: 'SVS Foundation Design', category: 'ppt-design', image: `${import.meta.env.BASE_URL}images/work/ppt-design/SVS Foundation PDF.png`, pdf: `${import.meta.env.BASE_URL}images/work/ppt-design/SVS Foundation Design.pdf` },
 
     // Resume
-    { id: 301, title: 'Krunal Resume', category: 'resume', image: 'images/work/resume/Krunal Resume.png' },
-    { id: 302, title: 'Urja Schdev Resume', category: 'resume', image: 'images/work/resume/Urja Schdev Resume.png' },
+    { id: 301, title: 'Krunal Resume', category: 'resume', image: `${import.meta.env.BASE_URL}images/work/resume/Krunal Resume.png` },
+    { id: 302, title: 'Urja Schdev Resume', category: 'resume', image: `${import.meta.env.BASE_URL}images/work/resume/Urja Schdev Resume.png` },
   ];
 
   const filteredProjects = filter === 'all'
