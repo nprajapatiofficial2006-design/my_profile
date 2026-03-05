@@ -14,14 +14,14 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Hire Me</a>
-            <a href="/images/Resume/Nisha Resume.pdf" className="btn btn-outline" rel="noopener noreferrer" download="Nisha_Prajapati_Resume.pdf">
+            <a href="images/Resume/Nisha Resume.pdf" className="btn btn-outline" rel="noopener noreferrer" download="Nisha_Prajapati_Resume.pdf">
               Download Resume <Download size={18} style={{ display: 'inline', marginLeft: '8px', verticalAlign: 'middle' }} />
             </a>
           </div>
         </div>
         <div className="hero-image-wrapper">
           <div className="hero-image-container">
-            <img src="/images/profile/Profile.png" alt="Nisha Prajapati" className="hero-image" />
+            <img src="images/profile/Profile.png" alt="Nisha Prajapati" className="hero-image" />
           </div>
         </div>
       </div>

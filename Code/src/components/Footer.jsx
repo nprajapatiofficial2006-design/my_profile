@@ -70,8 +70,8 @@ const Footer = () => {
         }
 
         .social-icon.whatsapp:hover {
-          background: #25D366;
-          box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+          background: var(--primary);
+          box-shadow: 0 4px 15px rgba(159, 11, 225, 0.4);
         }
         
         .copyright {
