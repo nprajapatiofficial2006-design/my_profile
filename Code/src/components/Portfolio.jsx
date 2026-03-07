@@ -42,7 +42,7 @@ const Portfolio = () => {
     { id: 200, title: 'Allura Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Allura Visiting Card.png` },
     { id: 201, title: 'Beauty Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Beauty Visiting Card.png` },
     { id: 202, title: 'Ganesh Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Ganesh Visiting Card.jpg` },
-    { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Pawan Viting Card.png` },
+    { id: 203, title: 'Pawan Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Pawan Visiting Card.png` },
     { id: 204, title: 'Resturant Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Resturant Visiting Card.png` },
     { id: 205, title: 'Shivendra Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Shivendra Visiting Card.jpg` },
     { id: 206, title: 'Visiting Card', category: 'visiting-card', image: `${import.meta.env.BASE_URL}images/work/visiting-card/Visiting Card.png` },
