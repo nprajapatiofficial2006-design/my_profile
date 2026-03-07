@@ -8,7 +8,7 @@ import { ExternalLink } from 'lucide-react';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
-  const [activePdf, setActivePdf] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   // Categories as per requirements
   const categories = [
@@ -79,9 +79,7 @@ const Portfolio = () => {
     : projects.filter(project => project.category === filter);
 
   const handleProjectClick = (project) => {
-    if (project.pdf) {
-      setActivePdf(project.pdf);
-    }
+    setActiveItem(project);
   };
 
   return (
@@ -135,15 +133,23 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {activePdf && (
-        <div className="pdf-modal" onClick={() => setActivePdf(null)}>
-          <div className="pdf-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-pdf" onClick={() => setActivePdf(null)}>&times;</button>
-            <iframe
-              src={activePdf}
-              title="PDF Viewer"
-              className="pdf-iframe"
-            ></iframe>
+      {activeItem && (
+        <div className="media-modal" onClick={() => setActiveItem(null)}>
+          <div className="media-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-media" onClick={() => setActiveItem(null)}>&times;</button>
+            {activeItem.pdf ? (
+              <iframe
+                src={activeItem.pdf}
+                title={activeItem.title}
+                className="media-iframe"
+              ></iframe>
+            ) : (
+              <img
+                src={activeItem.image}
+                alt={activeItem.title}
+                className="media-image"
+              />
+            )}
           </div>
         </div>
       )}
@@ -281,8 +287,8 @@ const Portfolio = () => {
           background: rgba(0,0,0,0.5);
         }
 
-        /* PDF Modal Styles */
-        .pdf-modal {
+        /* Media Modal Styles */
+        .media-modal {
           position: fixed;
           top: 0;
           left: 0;
@@ -296,23 +302,35 @@ const Portfolio = () => {
           padding: 20px;
         }
 
-        .pdf-modal-content {
+        .media-modal-content {
           width: 95%;
           height: 95%;
-          background: white;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           border-radius: 12px;
           position: relative;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-          overflow: hidden;
         }
 
-        .pdf-iframe {
+        .media-iframe {
           width: 100%;
           height: 100%;
           border: none;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        .close-pdf {
+        .media-image {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          border-radius: 4px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .close-media {
           position: absolute;
           top: 15px;
           right: 20px;
@@ -330,16 +348,19 @@ const Portfolio = () => {
           transition: var(--transition);
         }
 
-        .close-pdf:hover {
+        .close-media:hover {
           color: var(--primary);
           background: white;
           transform: rotate(90deg);
         }
 
         @media (max-width: 768px) {
-          .pdf-modal-content {
+          .media-modal-content {
             width: 100%;
             height: 100%;
+            border-radius: 0;
+          }
+          .media-iframe, .media-image {
             border-radius: 0;
           }
         }
